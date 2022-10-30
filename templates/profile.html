@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    <div class="section">
+        <img class="user--avatar--lg" src="{{user.avatar.url}}"/>
+        <h1>{{user.name}}</h1>
+    </div>
+    
+{% endblock content %}
