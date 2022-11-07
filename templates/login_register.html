@@ -4,7 +4,7 @@
 
     {% if page == 'register' %}
         <div class="login-register--container">
-            <h1 class="form-field--title">Create an Account</h1>
+            <h1 class="form-field--title">Registrate!!!</h1>
 
             <div>
             <form method="POST" action="{% url 'register' %}" enctype="multipart/form-data">
@@ -27,31 +27,24 @@
             </form> 
             </div>
 
-            <p class="login-register-switchpagetext">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            <p class="login-register-switchpagetext">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Iniciar sesión</a></p>
         </div>
     
         {% else %}
         <div class="login-register--container section">
-            <p class="login-greattings">Welcome to</p>
-            <h1 class="form-field--title">CodeBattels</h1>
+            <p class="login-greattings">Bienvenido a</p>
+            <h1 class="form-field--title">La Página de Eventos.</h1>
 
             <form method="POST" action="{% url 'login' %}">
                 {% csrf_token %}
 
-            
-
-                <!-- <div>
-                    <label>User:</label>
-                    <input type="text" name="username"/>
-                </div> -->
-
                 <div class="form-field--wrapper">
-                    <label>Email</label>
+                    <label>Correo</label>
                     <input class="form-field--input" id="id_email" type="email" name="email"/>
                 </div>
 
                 <div class="form-field--wrapper">
-                    <label>Password</label>
+                    <label>Contraseña</label>
                     <input class="form-field--input" id="id_password1" type="password" name="password"/>
                 </div>
 
@@ -59,7 +52,7 @@
                     <input class="btn btn--primary formsubmit-btn" type="submit" value="Login"/>
                 </div>
 
-                <p class="login-register-switchpagetext">Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+                <p class="login-register-switchpagetext">¿No tienes una cuenta? <a href="{% url 'register' %}">Registrate</a></p>
             </form>
         </div>
         

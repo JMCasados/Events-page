@@ -13,7 +13,7 @@ class User(AbstractUser):
     bio = models.TextField(null=True, blank=True)
     event_participant = models.BooleanField(default=True, null=True)
 
-    avatar = ResizedImageField(size=[300,300], default='avatar.png')
+    avatar = ResizedImageField(size=[300,300], default='profile.jpg')
 
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)

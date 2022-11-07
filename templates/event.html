@@ -14,20 +14,20 @@
     {% if event.event_status == 'Ongoing' %}
     <div class="section" id="event--action--wrapper">
         {% if registered %} 
-            <p class="text--success">You have already registed for this event || </p>
+            <p class="text--success">Ya te has registrado a este evento. || </p>
         {% else %}
-            <a class="btn btn--primary"  href="{% url 'registration-confirmation' event.id %}">Register</a>
+            <a class="btn btn--primary"  href="{% url 'registration-confirmation' event.id %}">Confirma tu Asistencia.</a>
         {% endif %}
 
         {% if submitted %} 
-            <p class="text--success">You have already submitted your project</p>
+            <p class="text--success">Ya agregaste un comentario.</p>
         {% else %}
-            <a class="btn btn--secondary" href="{% url 'project-submission' event.id %}">Submit Project</a>
+            <a class="btn btn--secondary" href="{% url 'project-submission' event.id %}">Deja un Comentario.</a>
         {% endif %}
     
     </div>
     {% else %}
-        <p>Registration closed for this event.</p>
+        <p>Este evento a finalizado.</p>
     {% endif %}
 
     <div class="markdown-body">

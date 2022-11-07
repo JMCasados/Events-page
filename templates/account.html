@@ -7,30 +7,31 @@
 </div>
 
 <div id="account--buttons">
-    <a class="btn btn--secondary" href="{% url 'edit-account' %}">Edit</a>
-    <a class="btn btn--secondary" href="{% url 'change-password' %}">Reset password</a>
-    <a class="btn btn--primary" href="{% url 'profile' user.id %}">View Profile</a>
+    <a class="btn btn--secondary" href="{% url 'edit-account' %}">Editar</a>
+    <a class="btn btn--secondary" href="{% url 'change-password' %}">Reiniciar Contraseña</a>
+    <a class="btn btn--primary" href="{% url 'profile' user.id %}">Perfil</a>
 </div>
 
 
-
 <div class="section">
-    <h3>My Events</h3>
+    <h3>Mis Eventos</h3>
     {% for event in user.events.all %}
         <a href="{% url 'event' event.id %}">{{event.name}}</a>
 
     {% empty %}
-        <p>You haven't registed for any events</p>
+        <p> 
+            No te has registrado a ningún evento
+            </p>
     {% endfor %}
 </div>
 
 <div class="section">
-    <h3>My Submissions</h3>
+    <h3>Mis Comentarios</h3>
     {% for sub in user.submissions.all %}
         <a href="{% url 'update-submission' sub.id %}">{{sub.event.name}}</a>
     
         {% empty %}
-        <p>You dont haven't submitted any projects yet</p>
+        <p>No has dejado ningún comentario</p>
     {% endfor %}
 </div>
     

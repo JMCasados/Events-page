@@ -1,14 +1,11 @@
-import re
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.test import TestCase
 from .models import User, Event, Submission
 from .forms import SubmissionForm, CustomUserCreationForm, UserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password
-from PIL import Image
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib import messages
 # Create your views here.
@@ -134,9 +131,6 @@ def change_password(request):
     return render(request, 'change_password.html')
 
 
-import time
-from datetime import datetime
-
 def event_page(request, pk):
     event = Event.objects.get(id=pk)
     
@@ -190,7 +184,7 @@ def update_submission(request, pk):
     submission = Submission.objects.get(id=pk)
 
     if request.user != submission.participant:
-        return HttpResponse('You cant be here!!!!')
+        return HttpResponse('No puedes estar aqui!!!!')
 
     event = submission.event
     form = SubmissionForm(instance=submission)

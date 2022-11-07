@@ -5,7 +5,8 @@
 
     <form method="post">
         {% csrf_token %}
-        <a href="{% url 'event' event.id %}">Go Back</a>
+        <h1>Asistencia Confirmada!</h1>
+        <a href="{% url 'event' event.id %}">Volver atrás</a>
         <input type="submit" value="Confirm">
     </form>
 
