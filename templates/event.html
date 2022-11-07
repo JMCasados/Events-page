@@ -1,12 +1,17 @@
 {% extends 'main.html' %}
-
+{% load markdown_extras %}
+{% load static %}
 
 {% block content %}
+<link rel='stylesheet' type='text/css' media='screen' href='{% static "css/event.css" %}'>
+
+
 
     <div class="section">
-        <h1 class="">{{event.name}}</h1>
-    </div>    
-
+        <h1>{{event.name}}</h1>
+    </div>
+   
+    {% if event.event_status == 'Ongoing' %}
     <div class="section" id="event--action--wrapper">
         {% if registered %} 
             <p class="text--success">You have already registed for this event || </p>
@@ -20,10 +25,13 @@
             <a class="btn btn--secondary" href="{% url 'project-submission' event.id %}">Submit Project</a>
         {% endif %}
     
-    </div>  
+    </div>
+    {% else %}
+        <p>Registration closed for this event.</p>
+    {% endif %}
 
-    <div class="section">
-        <p>{{event.description|linebreaks|urlize}}</p>
+    <div class="markdown-body">
+        {{event.description| markdown | safe }}
     </div>
 
     <div class="users--lists section">
@@ -40,7 +48,4 @@
             </a>
         {% endfor %}
     </div>
-
 {% endblock content %}
-
-

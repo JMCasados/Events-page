@@ -6,6 +6,7 @@ urlpatterns = [
     path('user/<str:pk>', views.user_page, name="profile"),
     path('account/', views.account_page, name="account"),
     path('edit-account/', views.edit_account, name="edit-account"),
+    path('change-password/', views.change_password, name="change-password"),
     path('event/<str:pk>/', views.event_page, name="event"),
     path('project-submission/<str:pk>', views.project_submission, name="project-submission"),
     path('event-confirmation/<str:pk>', views.registration_confirmation, name="registration-confirmation"),

@@ -3,7 +3,6 @@ from django.db import models
 import uuid
 from django.contrib.auth.models import AbstractUser
 from django_resized import ResizedImageField
-
 import time
 from datetime import datetime
 # Create your models here.
@@ -14,7 +13,7 @@ class User(AbstractUser):
     bio = models.TextField(null=True, blank=True)
     event_participant = models.BooleanField(default=True, null=True)
 
-    avatar = ResizedImageField(size=[300,300], default='profile.jpg')
+    avatar = ResizedImageField(size=[300,300], default='avatar.png')
 
     id = models.UUIDField(default=uuid.uuid4, unique=True,
                           primary_key=True, editable=False)
@@ -30,6 +29,7 @@ class User(AbstractUser):
 
     class Meta:
         ordering = ['avatar']
+
 
 class Event(models.Model):
     name = models.CharField(max_length=200)
@@ -75,3 +75,4 @@ class Submission(models.Model):
 
     def __str__(self):
         return str(self.event) + ' --- ' + str(self.participant)
+    

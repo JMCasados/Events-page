@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'codebattle.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'chancho',
+       'NAME': 'railway',
        'USER': 'postgres',
-       'PASSWORD': 'puerco12',
-       'HOST': 'localhost',
-       'PORT': '5432',
+       'PASSWORD': 'pmYeuuZT0qt0nRvFSibf',
+       'HOST': 'containers-us-west-112.railway.app',
+       'PORT': '6930',
    }
 }
 
