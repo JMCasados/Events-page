@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-qotev7e1^z$gbonie-1ab=u&9ypi%+c2q)i3k0y!%2uvg27y#u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'pagina-registro-production.up.railway.app',
+    '127.0.0.1',
+    'localhost',
+]
 
 AUTH_USER_MODEL = 'base.User'
 # Application definition
@@ -148,4 +152,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000/",
+    "pagina-registro-production.up.railway.app",
 ]
