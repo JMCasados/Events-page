@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qotev7e1^z$gbonie-1ab=u&9ypi%+c2q)i3k0y!%2uvg27y#u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'event.up.railway.app',
+    'jmcasados-eventos.xyz',
     '127.0.0.1',
     'localhost',
 ]
@@ -152,5 +152,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000",
-    "https://event.up.railway.app",
+    "https://jmcasados-eventos.xyz/",
 ]
