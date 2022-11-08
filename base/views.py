@@ -8,6 +8,7 @@ from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib import messages
+from PIL import Image
 # Create your views here.
 
 def login_page(request):
