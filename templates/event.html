@@ -27,14 +27,16 @@
     
     </div>
     {% else %}
-        <p>Este evento a finalizado.</p>
+        <h6>Este evento a finalizado.</h1>
     {% endif %}
 
-    <div class="markdown-body">
-        {{event.description| markdown | safe }}
+    <div class="section">
+        <h6>{{event.description| markdown | safe }}</h6>
     </div>
 
-    <div class="users--lists section">
+
+    <h4 class="event__preview--title, section">Usuarios participantes:</h4>
+    <div class="users--lists section">        
         {% for user in event.participants.all %}
             <a href="{% url 'profile' user.id%}">
                 <div class="wrapper--user">
@@ -48,4 +50,5 @@
             </a>
         {% endfor %}
     </div>
+
 {% endblock content %}
