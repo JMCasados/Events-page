@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qotev7e1^z$gbonie-1ab=u&9ypi%+c2q)i3k0y!%2uvg27y#u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'pagina-registro-production.up.railway.app',
+    'pagina-registro.up.railway.app',
     '127.0.0.1',
     'localhost',
 ]
@@ -119,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 
@@ -152,5 +152,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000",
-    "https://pagina-registro-production.up.railway.app",
+    "https://pagina-registro.up.railway.app",
 ]
