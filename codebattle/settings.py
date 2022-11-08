@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qotev7e1^z$gbonie-1ab=u&9ypi%+c2q)i3k0y!%2uvg27y#u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'pagina-registro.up.railway.app',
+    'event.up.railway.app',
     '127.0.0.1',
     'localhost',
 ]
@@ -152,5 +152,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000",
-    "https://pagina-registro.up.railway.app",
+    "https://event.up.railway.app",
 ]
