@@ -83,6 +83,12 @@ h6{
     background-color: #ffe900;
 }
 
+.btn--home{
+    background-color:#fff;
+    color: #000;
+    border: 1px solid #DEE4ED;
+}
+
 
 .error{
     color: #E55D42;
@@ -411,11 +417,11 @@ nav{
  }
 
  @media (max-width:800px) {
-
+/* 
     #logo--wrapper{
         display:  none;
     }
-  
+   */
 
     .users--lists{
    

@@ -28,6 +28,7 @@
             </div>
 
             <p class="login-register-switchpagetext">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Iniciar sesión</a></p>
+            <a class="btn btn--home" href="{% url 'home' %}">Volver al Inicio.</a>
         </div>
     
         {% else %}
@@ -54,6 +55,8 @@
 
                 <p class="login-register-switchpagetext">¿No tienes una cuenta? <a href="{% url 'register' %}">Registrate</a></p>
             </form>
+
+            <a class="btn btn--home" href="{% url 'home' %}">Volver al Inicio.</a>
         </div>
         
 
